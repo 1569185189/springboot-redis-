@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyp.mapper.ScoreMapper">
+    <select id="selectScoreById" resultType="com.zyp.entity.Score">
+        select sid as sid,
+        score as score,
+        subject as subject,
+        stu_id as stuId
+        from score
+        where stu_id = #{id}
+    </select>
+</mapper>
